@@ -358,16 +358,3 @@ def find_freq(corpus, word_list, excel_filename="word_frequencies.xlsx"):
     # Write the DataFrame to an Excel file
     df.to_excel(excel_filename, index=False)
 
-if __name__ == "__main__":    
-    tokens = read_and_tokenize_corpus(collocation_textbook_corpus)
-    tokens = clean_tokens(tokens)
-    words = read_targeted_collocations(verb_noun_D11)
- 
-
-
-
-    corpus_ngram_textbook_to_excel(words, tokens, 'C:\\Users\\adria\\OneDrive - The Open University\\Loan_disert\\Dissertation - Minh Loan\\Words\\ngram.xlsx', start_col=0, start_row=0)
-    find_freq(tokens,words, excel_filename='C:\\Users\\adria\\OneDrive - The Open University\\Loan_disert\\Dissertation - Minh Loan\\Words\\individual.xlsx')
-    
-
-
